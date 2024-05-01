@@ -1,0 +1,26 @@
+name: workspace_CI
+on:
+  push:
+    branches: [ workspace_publish ]
+  
+  workflow_dispatch :
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Synapse workspace deployment
+        uses: Azure/synapse-workspace-deployment@release-1.0
+        with:
+          TargetWorkspaceName: 'coopcicdwsuat'
+          TemplateFile: './coopcicdws/TemplateForWorkspace.json'
+          ParametersFile: './coopcicdws/TemplateParametersForWorkspace.json'
+          environment: 'Azure Public'
+          resourceGroup: 'DV-VK-Coop-RG_Target'
+          clientId: ${{ secrets.CLIENTID }}
+          clientSecret: ${{ secrets.CLIENTSECRET }}
+          subscriptionId: ${{ secrets.SUBSCRIPTIONID }}
+          tenantId: ${{ secrets.TENANTID }}
+          operation: 'deploy'
+          DeleteArtifactsNotInTemplate: 'false'
