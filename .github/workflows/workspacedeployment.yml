@@ -18,6 +18,7 @@ jobs:
           TargetWorkspaceName: 'coopcicdwsuat'
           TemplateFile: './coopcicdws/TemplateForWorkspace.json'
           ParametersFile: './coopcicdws/TemplateParametersForWorkspace.json'
+          environment: 'Azure Public'
           resourceGroup: 'DV-VK-Coop-RG_Target'
           clientId: ${{ secrets.CLIENTID }}
           clientSecret: ${{ secrets.CLIENTSECRET }}
