@@ -2,9 +2,11 @@ name: workspace_CI
 on:
   push:
     branches: [ workspace_publish ]
-  
-  workflow_dispatch :
 
+permissions:
+  id-token: write
+  contents: read
+  
 jobs:
   release:
     runs-on: windows-latest
