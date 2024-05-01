@@ -89,7 +89,7 @@
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
 				"content": {
-					"query": "select 'ABCD'",
+					"query": "select 'ABCDE'",
 					"metadata": {
 						"language": "sql"
 					},
