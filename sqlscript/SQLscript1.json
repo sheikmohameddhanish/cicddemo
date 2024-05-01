@@ -2,7 +2,7 @@
 	"name": "SQLscript1",
 	"properties": {
 		"content": {
-			"query": "select 'ABCD'",
+			"query": "select 'ABCDE'",
 			"metadata": {
 				"language": "sql"
 			},
