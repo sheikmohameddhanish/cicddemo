@@ -20,8 +20,8 @@ jobs:
           ParametersFile: './coopcicdws/TemplateParametersForWorkspace.json'
           environment: 'Azure Public'
           resourceGroup: 'DV-VK-Coop-RG_Target'
-          clientId: 'ed951a0b-4b0e-4bf7-81d1-e9a0fcff97ca'
-          clientSecret: 'Fb48Q~Lo8_abKUSRWu5s3ATh5B-v883uSiOfhaTB'
-          subscriptionId: 'f03d4fe8-5876-4a47-84a5-59f9b6684145'
-          tenantId: 'd0e2ebcc-0961-45b2-afae-b9ed6728ead7'
+          clientId: ${{ secrets.CLIENTID }}
+          clientSecret: ${{ secrets.CLIENTSECRET }}
+          subscriptionId: ${{ secrets.SUBSCRIPTIONID }}
+          tenantId: ${{ secrets.TENANTID }}
           DeleteArtifactsNotInTemplate: 'true'
