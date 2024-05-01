@@ -24,5 +24,4 @@ jobs:
           clientSecret: ${{ secrets.CLIENTSECRET }}
           subscriptionId: ${{ secrets.SUBSCRIPTIONID }}
           tenantId: ${{ secrets.TENANTID }}
-          operation: 'deploy'
           DeleteArtifactsNotInTemplate: 'false'
