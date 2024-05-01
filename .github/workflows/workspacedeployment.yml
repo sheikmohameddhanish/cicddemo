@@ -19,9 +19,9 @@ jobs:
           TemplateFile: './coopcicdws/TemplateForWorkspace.json'
           ParametersFile: './coopcicdws/TemplateParametersForWorkspace.json'
           environment: 'Azure Public'
-          resourceGroup: 'DV-VK-Coop-RG'
+          resourceGroup: 'DV-VK-Coop-RG_Target'
           clientId: ${{ secrets.CLIENTID }}
           clientSecret: ${{ secrets.CLIENTSECRET }}
           subscriptionId: ${{ secrets.SUBSCRIPTIONID }}
           tenantId: ${{ secrets.TENANTID }}
-          DeleteArtifactsNotInTemplate: 'false'
+          DeleteArtifactsNotInTemplate: 'true'
